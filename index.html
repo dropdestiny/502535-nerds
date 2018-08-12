@@ -3,10 +3,124 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <!--Размеры логотипа пока неизвестны, поэтому временно 200х100-->
+      <img src="img/index-logo.svg" width="200" heigth="100" alt="Логотип дизайн-студии «Нёрдс»">
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a href="studio.html">Студия</a></li>
+          <li><a href="clients.html">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="shop-navigation">
+          <li><a href="cart.html">Корзина</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <!--H1 заголовка на странице вроде как нет, поэтому позже скрою его в css-->
+      <h1 class="visually-hidden"></h1>
+      <!--Размеры картинок в слайдере пока неизвестны, поэтому временно 1200х600
+      Да и в целом пока не знаю как его правильно сделать, поэтому пусть будет так, позже изменю-->
+      <div class="top-slider">
+        <div class="first-slide">
+          <p>Долго, дорого, скурпулезно.</p>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a class="button button-red" href="#">Узнать больше</a><br><br>
+          <img src="#" width="1200" height="600" alt="Первый слайд в хедере"></img>
+        </div>
+        <div class="second-slide">
+          <img src="#" width="1200" height="600" alt="Второй слайд в хедере">
+          <a href="#"></a>
+        </div>
+        <div class="third-slide">
+          <img src="#" width="1200" height="600" alt="Третий слайд в хедере">
+          <a href="#"></a>
+        </div>
+      </div>
+      <!--H2 заголовок также будет позже скрыт в css-->
+      <section class="services">
+      <h2 class="visually-hidden">Услуги</h2>
+      <ul class="services-list">
+        <li class="service-item">
+          <!--Наверное по клику на "Заказать" должно открываться модальное окно с формой обратной связи, пока оставлю плейсхолдеры-->
+          <img src="#" width="400" height="200" alt="Картинка для услуги 'Веб-сайты'"></img>
+          <H3>Веб-сайты</H3>
+          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="button button-red" href="#">Заказать</a>
+        </li><br>
+        <li class="service-item">
+          <img src="#" width="400" height="200" alt="Картинка для услуги 'Приложения'"></img>
+          <H3>Приложения</H3>
+          <p>Покорите топ-10 приложений в Appstore и Google Play</p>
+          <a class="button button-green"href="#">Заказать</a>
+        </li><br>
+        <li class="service-item">
+          <img src="#" width="400" height="200" alt="Картинка для услуги 'Презентации'"></img>
+          <H3>Презентации</H3>
+          <p>Вы даже не подозреваете, насколько вы изумительны</p>
+          <a class="button button-yellow" href="#">Заказать</a>
+        </li><br>
+      </ul>
+    </section>
+      <hr>
+      <section class="about-us">
+      <p>Мы - маленькая, но гордая дизайн-студия из Краснодара.</p>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+      <h4>Выполняем заказы на разработку:</h4>
+      <ul>
+        <li>Веб-сайтов любой сложности</li>
+        <li>Мобильных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
+      <img src="#" width="350" height="250" alt="Логотип веб-студии Нёрдс"></img>
+      <h4>С 2004 года любым точность во всем:</h4>
+      <!--Дальше будет ломанная таблица на флексбоксах, оставлю пока так-->
+      <table>
+        <tr>
+          <td>146%</td>
+          <td>100%</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <td>Уровень самоотдачи</td>
+          <td>Соблюдение сроков</td>
+          <td>Минимальная предоплата</td>
+        </tr>
+      </table>
+    </section>
+      <hr>
+      <section class="carousel">
+      <div class="logo-carousel">
+        <div class="first-logo"><img src="#" alt="Первый логотип в карусели"></img></div>
+        <div class="second-logo"><img src="#" alt="Второй логотип в карусели"></img></div>
+        <div class="third-logo"><img src="#" alt="Третий логотип в карусели"></img></div>
+        <div class="foutrh-logo"><img src="#" alt="Четвертый логотип в карусели"></img></div>
+      </div>
+    </section>
+      <hr>
+      </main>
+      <footer class="main-footer">
+      <section class="contacts-map">
+        <div class="contacts">
+          <h4>NЁRDS DESIGN STUDIO</h4>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br>
+             тел. +7 (812) 275-75-75
+        </p>
+        <a class="button button-red" href="#">Напишите нам</a>
+        </div><br>
+      </section>
+      <div class="footer-social">
+        <a class="social-button" href="#">Вконтакте</a>
+        <a class="social-button" href="#">Фейсбук</a>
+        <a class="social-button" href="#">Инстаграм</a>
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+     </footer>
   </body>
 </html>
