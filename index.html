@@ -7,9 +7,11 @@
   </head>
   <body>
     <header class="main-header">
-      <!--Размеры логотипа пока неизвестны, поэтому временно 200х100-->
-      <img src="img/index-logo.svg" width="200" height="100" alt="Логотип дизайн-студии «Нёрдс»">
       <nav class="main-navigation">
+        <!--Размеры логотипа пока неизвестны, поэтому временно 200х100-->
+        <a class="main-header-logo">
+          <img src="img/index-logo.svg" width="200" height="100" alt="Логотип дизайн-студии «Нёрдс»">
+        </a>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
@@ -24,91 +26,93 @@
     <main class="container">
       <!--H1 заголовка на странице вроде как нет, поэтому позже скрою его в css-->
       <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-      <!--Размеры картинок в слайдере пока неизвестны, поэтому временно 1200х600
-      Да и в целом пока не знаю как его правильно сделать, поэтому пусть будет так, позже изменю-->
-      <div class="top-slider">
-        <div class="first-slide">
+      <!--Размеры картинок в слайдере пока неизвестны, поэтому временно 1200х600-->
+      <div class="slider">
+        <div class="slide">
           <h3>Долго, дорого, скурпулезно.</h3>
           <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
           <a class="button button-red" href="#">Узнать больше</a>
-       </div>
-        <div class="second-slide">
+        </div>
+        <div class="slide">
           <h3>Любим математику, как никто другой.</h3>
           <p>Никакого креатива, только математические формулы для рассчета идеальных пропорций.</p>
           <a class="button button-red" href="#">Узнать больше</a>
-       </div>
-        <div class="third-slide">
+        </div>
+        <div class="slide">
           <h3>Только ночь, только хардкор.</h3>
           <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
           <a class="button button-red" href="#">Узнать больше</a>
-       </div>
-    </div>
+        </div>
+        <div class="slider-button">
+          <a class="slider-control-button" href="#"></a>
+          <a class="slider-control-button" href="#"></a>
+          <a class="slider-control-button" href="#"></a>
+        </div>
+      </div>
       <!--H2 заголовок также будет позже скрыт в css-->
       <section class="services">
-      <h2 class="visually-hidden">Услуги</h2>
-      <ul class="services-list">
-        <li class="service-item">
-          <!--Наверное по клику на "Заказать" должно открываться модальное окно с формой обратной связи, пока оставлю плейсхолдеры-->
-          <img src="#" width="400" height="200" alt="Картинка для услуги 'Веб-сайты'">
-          <H3>Веб-сайты</H3>
-          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a class="button button-red" href="#">Заказать</a>
-        </li>
-        <li class="service-item">
-          <img src="#" width="400" height="200" alt="Картинка для услуги 'Приложения'">
-          <H3>Приложения</H3>
-          <p>Покорите топ-10 приложений в Appstore и Google Play</p>
-          <a class="button button-green" href="#">Заказать</a>
-        </li>
-        <li class="service-item">
-          <img src="#" width="400" height="200" alt="Картинка для услуги 'Презентации'">
-          <H3>Презентации</H3>
-          <p>Вы даже не подозреваете, насколько вы изумительны</p>
-          <a class="button button-yellow" href="#">Заказать</a>
-        </li>
-      </ul>
-    </section>
-    <hr>
+        <h2 class="visually-hidden">Услуги</h2>
+        <ul class="services-list">
+          <li class="service-item">
+            <h3>Веб-сайты</h3>
+            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a class="button button-red" href="#">Заказать</a>
+          </li>
+          <li class="service-item">
+            <h3>Приложения</h3>
+            <p>Покорите топ-10 приложений в Appstore и Google Play</p>
+            <a class="button button-green" href="#">Заказать</a>
+          </li>
+          <li class="service-item">
+            <h3>Презентации</h3>
+            <p>Вы даже не подозреваете, насколько вы изумительны</p>
+            <a class="button button-yellow" href="#">Заказать</a>
+          </li>
+        </ul>
+      </section>
       <section class="about-us">
-      <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
-      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <h4>Выполняем заказы на разработку:</h4>
-      <ul>
-        <li>Веб-сайтов любой сложности</li>
-        <li>Мобильных приложений для iOS и Android</li>
-        <li>Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
-      <img src="#" width="350" height="250" alt="Логотип веб-студии Нёрдс">
+        <h2 class="visually-hidden">О нас</h2>
+        <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <h4>Выполняем заказы на разработку:</h4>
+        <ul>
+          <li>Веб-сайтов любой сложности</li>
+          <li>Мобильных приложений для iOS и Android</li>
+          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+        <img src="#" width="350" height="250" alt="Логотип веб-студии Нёрдс">
         <!--Дальше будет ломанная таблица на флексбоксах, оставлю пока так-->
-      <table>
-        <caption>
-          С 2004 года любым точность во всем:
-        </caption>
-        <tr>
-          <td>146<sup>%</sup></td>
-          <td>100<sup>%</sup></td>
-          <td>50<sup>%</sup></td>
-        </tr>
-        <tr>
-          <td>Уровень самоотдачи</td>
-          <td>Соблюдение сроков</td>
-          <td>Минимальная предоплата</td>
-        </tr>
-      </table>
-    </section>
-      <hr>
-      <section class="carousel">
-      <div class="logo-carousel">
-        <div class="first-logo"><img src="#" alt="Первый логотип в карусели"></div>
-        <div class="second-logo"><img src="#" alt="Второй логотип в карусели"></div>
-        <div class="third-logo"><img src="#" alt="Третий логотип в карусели"></div>
-        <div class="foutrh-logo"><img src="#" alt="Четвертый логотип в карусели"></div>
-     </div>
-    </section>
-      <hr>
-      </main>
-      <footer class="main-footer">
+        <table>
+          <caption>
+            С 2004 года любым точность во всем:
+          </caption>
+          <tbody>
+            <tr>
+              <td>146<sup>%</sup></td>
+              <td>100<sup>%</sup></td>
+              <td>50<sup>%</sup></td>
+            </tr>
+            <tr>
+              <td>Уровень самоотдачи</td>
+              <td>Соблюдение сроков</td>
+              <td>Минимальная предоплата</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="logo-list-items">
+        <h2 class="visually-hidden">Логотипы проектов</h2>
+        <div class="logo-list">
+          <div class="logo-item"><a href="#"><img src="#" alt="Первый логотип"></a></div>
+          <div class="logo-item"><a href="#"><img src="#" alt="Второй логотип"></a></div>
+          <div class="logo-item"><a href="#"><img src="#" alt="Третий логотип"></a></div>
+          <div class="logo-item"><a href="#"><img src="#" alt="Четвертый логотип"></a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
       <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
         <div class="social-items">
           <a class="social-button" href="#">Вконтакте</a>
           <a class="social-button" href="#">Фейсбук</a>
@@ -118,16 +122,17 @@
         </div>
       </section>
       <section class="contacts-map">
+        <h2 class='visually-hidden'>Контакты</h2>
         <div class="contacts">
-        <b>NЁRDS DESIGN STUDIO</b>
-        <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a>
-        </p>
-        <!--Тут будет форма, пока оставлю ссылку-->
-        <a class="button button-red" href="#">Напишите нам</a>
-       </div>
-       <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1200" height="400"></iframe>
+          <b>NЁRDS DESIGN STUDIO</b>
+          <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a>
+          </p>
+          <!--Тут будет форма, пока оставлю ссылку-->
+          <a class="button button-red" href="#">Напишите нам</a>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1200" height="400"></iframe>
       </section>
-      </footer>
+    </footer>
   </body>
 </html>
