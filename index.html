@@ -7,11 +7,11 @@
   </head>
   <body>
     <header class="main-header">
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+      </a>
       <nav class="main-navigation">
-        <!--Размеры логотипа пока неизвестны, поэтому временно 200х100-->
-        <a class="main-header-logo">
-          <img src="img/index-logo.svg" width="200" height="100" alt="Логотип дизайн-студии «Нёрдс»">
-        </a>
+        <span class="visually-hidden">Навигация по сайту</span>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
           <li><a href="clients.html">Клиенты</a></li>
@@ -24,9 +24,7 @@
       </nav>
     </header>
     <main class="container">
-      <!--H1 заголовка на странице вроде как нет, поэтому позже скрою его в css-->
       <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
-      <!--Размеры картинок в слайдере пока неизвестны, поэтому временно 1200х600-->
       <div class="slider">
         <div class="slide">
           <h3>Долго, дорого, скурпулезно.</h3>
@@ -49,7 +47,6 @@
           <a class="slider-control-button" href="#"></a>
         </div>
       </div>
-      <!--H2 заголовок также будет позже скрыт в css-->
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="services-list">
@@ -80,7 +77,7 @@
           <li>Мобильных приложений для iOS и Android</li>
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
-        <img src="#" width="350" height="250" alt="Логотип веб-студии Нёрдс">
+        <img src="img/about-us-logo-nerds.png" width="360" height="208" alt="Логотип веб-студии Нёрдс">
         <!--Дальше будет ломанная таблица на флексбоксах, оставлю пока так-->
         <table>
           <caption>
@@ -102,12 +99,12 @@
       </section>
       <section class="logo-list-items">
         <h2 class="visually-hidden">Логотипы проектов</h2>
-        <div class="logo-list">
-          <div class="logo-item"><a href="#"><img src="#" alt="Первый логотип"></a></div>
-          <div class="logo-item"><a href="#"><img src="#" alt="Второй логотип"></a></div>
-          <div class="logo-item"><a href="#"><img src="#" alt="Третий логотип"></a></div>
-          <div class="logo-item"><a href="#"><img src="#" alt="Четвертый логотип"></a></div>
-        </div>
+        <ul class="logo-list">
+          <li class="logo-item"><a href="#"><img src="#" alt="Первый логотип"></a></li>
+          <li class="logo-item"><a href="#"><img src="#" alt="Второй логотип"></a></li>
+          <li class="logo-item"><a href="#"><img src="#" alt="Третий логотип"></a></li>
+          <li class="logo-item"><a href="#"><img src="#" alt="Четвертый логотип"></a></li>
+        </ul>
       </section>
     </main>
     <footer class="main-footer">
@@ -128,11 +125,32 @@
           <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a>
           </p>
-          <!--Тут будет форма, пока оставлю ссылку-->
           <a class="button button-red" href="#">Напишите нам</a>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1200" height="400"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1440" height="416"></iframe>
+        <!--Оставлю коммент, чтобы позже поставить плейсхолдер на случай если вдруг айфрейм с картой не загрузится.-->
       </section>
     </footer>
+    <section class="modal modal-write-us">
+      <h2>Напишите нам</h2>
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post" >
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input class="write-us-name" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input class="write-us-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-text-field">Текст письма:</label>
+        </p>
+        <p>
+          <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="button modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
