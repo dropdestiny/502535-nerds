@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href='css/normalize.css'>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
-      </a>
       <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+        </a>
         <span class="visually-hidden">Навигация по сайту</span>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
@@ -18,7 +20,7 @@
           <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul class="shop-navigation">
+        <ul class="user-navigation">
           <li><a href="cart.html">Корзина</a></li>
         </ul>
       </nav>
@@ -36,8 +38,8 @@
             <input type="number" value="0" min="0" max="14000" id="cost-range-min">
             <label for="cost-range-max">ДО</label>
             <input type="number" value="15000" min="1000" max="15000" id="cost-range-max">
-            <button>Кругляш вместо ползунка цены 1</button>
-            <button>Кругляш вместо ползунка цены 2</button>
+            <button class="cost-range-button circle-button-left">Кругляш вместо ползунка цены 1</button>
+            <button class="cost-range-button circle-button-rigth">Кругляш вместо ползунка цены 2</button>
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
@@ -83,13 +85,13 @@
           </fieldset>
           <button type="submit" class="button filter-button">Показать</button>
         </form>
-        <p class="filter">Сортировать:</p>
-        <ul class="calatog-filters">
-          <li><a href="#">По цене</a></li>
+        <p class="filter-items">Сортировать:</p>
+        <ul class="catalog-filters">
+          <li><a class="catalog-filters-current" href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По названию</a></li>
-          <li><a class="button filter-button" href="#">стрелочка вверх</a></li>
-          <li><a class="button filter-button" href="#">стрелочка вниз</a></li>
+          <li><a class="filter-button-triangle" href="#">стрелочка вверх</a></li>
+          <li><a class="filter-button-triangle" href="#">стрелочка вниз</a></li>
         </ul>
       </section>
       <section class="catalog">
@@ -105,7 +107,7 @@
               <a class="button button-item-price" href="#">9900 руб.</a>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <img class="catalog-item-image" src="img/pink.jpg" width="360" height="576" alt="Pink App">
             <div class="catalog-item-info">
               <h3 class="catalog-item-name">
@@ -115,7 +117,7 @@
               <a class="button button-item-price" href="#">9900 руб.</a>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <img class="catalog-item-image" src="img/barbershop.jpg" width="360" height="576" alt="Barbsershop">
             <div class="catalog-item-info">
               <h3 class="catalog-item-name">
@@ -125,7 +127,7 @@
               <a class="button button-item-price" href="#">9900 руб.</a>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <img class="catalog-item-image" src="img/mishka.jpg" width="360" height="576" alt="Mishka">
             <div class="catalog-item-info">
               <h3 class="catalog-item-name">
@@ -135,7 +137,7 @@
               <a class="button button-item-price" href="#">9900 руб.</a>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <img class="catalog-item-image" src="img/aplus.jpg" width="360" height="576" alt="A Plus">
             <div class="catalog-item-info">
               <h3 class="catalog-item-name">
@@ -145,7 +147,7 @@
               <a class="button button-item-price" href="#">9900 руб.</a>
             </div>
           </li>
-          <li>
+          <li class="catalog-item">
             <img class="catalog-item-image" src="img/kvast.jpg" width="360" height="576" alt="Kvast">
             <div class="catalog-item-info">
               <h3 class="catalog-item-name">
@@ -182,35 +184,44 @@
         <h2 class='visually-hidden'>Контакты</h2>
         <div class="contacts">
           <b>NЁRDS DESIGN STUDIO</b>
-          <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            тел.<a class="write-us-tel" href="tel:+7(812)275-75-75"> +7 (812) 275-75-75</a>
           </p>
-          <a class="button button-red" href="#">Напишите нам</a>
+          <a class="button" href="#">Напишите нам</a>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1440" height="416"></iframe>
-        <img src="img/contacts-map-placeholder.png" width="1440" height="416" alt="Карта с указанием нашего адреса"></img>
+        <!--iframe яндекс карт почему-то перестал грузиться, вместо него вставил гугл карту. если перенести стили из внутренних дивов в css то карта перестает грузиться.-->
+        <div class="adress-map">
+          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+          <div style='overflow:hidden;height:416px;width:1440px;'>
+            <div id='gmap_canvas' style='height:416px;width:1440px;'></div>
+            <style>#gmap_canvas img{max-width:none;background:none}</style>
+          </div>
+          <script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new      google.maps.LatLng(59.9387165,30.32304739999995),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(59.9387165,30.32304739999995)});infowindow = new google.maps.InfoWindow({content:'<strong>Наш адрес:</strong><br>Россия, Санкт-Петербург, ул.Большая Конюшенная, дом 19/8<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load',  init_map);
+          </script>
+        </div>
+        <img src="img/contacts-map-placeholder.png" alt="Карта с указанием нашего адреса">
       </section>
     </footer>
     <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post" >
-        <p>
+        <p class="write-us-item">
           <label for="write-us-name">Ваше имя:</label>
-          <input class="write-us-name" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+          <input type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
         </p>
-        <p>
+        <p class="write-us-item">
           <label for="write-us-email">Ваш e-mail:</label>
-          <input class="write-us-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+          <input type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
         </p>
-        <p>
+        <p class="write-us-item">
           <label for="write-us-text-field">Текст письма:</label>
         </p>
-        <p>
-          <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
+        <p class="write-us-item">
+          <textarea name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button modal-button-submit" type="submit">Отправить</button>
       </form>
-      <button class="button modal-close" type="button">Закрыть</button>
+      <button class="button modal-button-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

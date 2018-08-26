@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href='css/normalize.css'>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-        <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
-      </a>
       <nav class="main-navigation">
+        <a class="main-header-logo" href="#">
+          <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+        </a>
         <span class="visually-hidden">Навигация по сайту</span>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
@@ -18,7 +20,7 @@
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul class="shop-navigation">
+        <ul class="user-navigation">
           <li><a href="cart.html">Корзина</a></li>
         </ul>
       </nav>
@@ -29,19 +31,19 @@
         <div class="slide">
           <h3>Долго, дорого, скурпулезно.</h3>
           <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <a class="button button-red" href="#">Узнать больше</a>
+          <a class="button slider-button" href="#">Узнать больше</a>
         </div>
         <div class="slide">
           <h3>Любим математику, как никто другой.</h3>
           <p>Никакого креатива, только математические формулы для рассчета идеальных пропорций.</p>
-          <a class="button button-red" href="#">Узнать больше</a>
+          <a class="button slider-button" href="#">Узнать больше</a>
         </div>
         <div class="slide">
           <h3>Только ночь, только хардкор.</h3>
           <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-          <a class="button button-red" href="#">Узнать больше</a>
+          <a class="button slider-button" href="#">Узнать больше</a>
         </div>
-        <div class="slider-button">
+        <div class="slider-control">
           <a class="slider-control-button" href="#"></a>
           <a class="slider-control-button" href="#"></a>
           <a class="slider-control-button" href="#"></a>
@@ -53,7 +55,7 @@
           <li class="service-item">
             <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a class="button button-red" href="#">Заказать</a>
+            <a class="button" href="#">Заказать</a>
           </li>
           <li class="service-item">
             <h3>Приложения</h3>
@@ -79,15 +81,15 @@
         </ul>
         <img src="img/about-us-logo-nerds.png" width="360" height="208" alt="Логотип веб-студии Нёрдс">
         <!--Дальше будет ломанная таблица на флексбоксах, оставлю пока так-->
-        <table>
+        <table class="stats-information">
           <caption>
-            С 2004 года любым точность во всем:
+            С 2004 года любим точность во всем:
           </caption>
           <tbody>
-            <tr>
-              <td>146<sup>%</sup></td>
-              <td>100<sup>%</sup></td>
-              <td>50<sup>%</sup></td>
+            <tr class="stats-description">
+              <td class="stats-description-item">146<sup>%</sup></td>
+              <td class="stats-description-item">100<sup>%</sup></td>
+              <td class="stats-description-item">50<sup>%</sup></td>
             </tr>
             <tr>
               <td>Уровень самоотдачи</td>
@@ -101,9 +103,9 @@
         <h2 class="visually-hidden">Логотипы проектов</h2>
         <ul class="logo-list">
           <li class="logo-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" width="199" height="68" alt="Логотип HTMLAcademy"></a></li>
-          <li class="logo-item"><a href="#"><img src="img/logo-barbershop" width="209" height="90" alt="Логотип Barbershop"></a></li>
+          <li class="logo-item"><a href="#"><img src="img/logo-barbershop.png" width="209" height="90" alt="Логотип Barbershop"></a></li>
           <li class="logo-item"><a href="#"><img src="img/logo-pinkapp.png" width="185" height="52" alt="Логотип PinkApp"></a></li>
-          <li class="logo-item"><a href="#"><img src="img/logo-mishka.png" width="173" height="84"alt="Логотип Mishka"></a></li>
+          <li class="logo-item"><a href="#"><img src="img/logo-mishka.png" width="173" height="84" alt="Логотип Mishka"></a></li>
         </ul>
       </section>
     </main>
@@ -122,35 +124,44 @@
         <h2 class='visually-hidden'>Контакты</h2>
         <div class="contacts">
           <b>NЁRDS DESIGN STUDIO</b>
-          <p class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <a href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            тел.<a class="write-us-tel" href="tel:+7(812)275-75-75"> +7 (812) 275-75-75</a>
           </p>
-          <a class="button button-red" href="#">Напишите нам</a>
+          <a class="button" href="#">Напишите нам</a>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBuPYFH3xA" width="1440" height="416"></iframe>
-        <img src="img/contacts-map-placeholder.png" width="1440" height="416" alt="Карта с указанием нашего адреса"></img>
+        <!--iframe яндекс карт почему-то перестал грузиться, вместо него вставил гугл карту. если перенести стили из внутренних дивов в css то карта перестает грузиться.-->
+        <div class="adress-map">
+          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+          <div style='overflow:hidden;height:416px;width:1440px;'>
+            <div id='gmap_canvas' style='height:416px;width:1440px;'></div>
+            <style>#gmap_canvas img{max-width:none;background:none}</style>
+          </div>
+          <script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new      google.maps.LatLng(59.9387165,30.32304739999995),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(59.9387165,30.32304739999995)});infowindow = new google.maps.InfoWindow({content:'<strong>Наш адрес:</strong><br>Россия, Санкт-Петербург, ул.Большая Конюшенная, дом 19/8<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load',  init_map);
+          </script>
+        </div>
+        <img src="img/contacts-map-placeholder.png" alt="Карта с указанием нашего адреса">
       </section>
     </footer>
     <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post" >
-        <p>
+        <p class="write-us-item">
           <label for="write-us-name">Ваше имя:</label>
-          <input class="write-us-name" type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
+          <input type="text" name="write-us-name" id="write-us-name" placeholder="Имя Фамилия">
         </p>
-        <p>
+        <p class="write-us-item">
           <label for="write-us-email">Ваш e-mail:</label>
-          <input class="write-us-email" type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
+          <input type="email" name="write-us-email" id="write-us-email" placeholder="email@example.com">
         </p>
-        <p>
+        <p class="write-us-item">
           <label for="write-us-text-field">Текст письма:</label>
         </p>
-        <p>
-          <textarea class="write-us-text-field" name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
+        <p class="write-us-item">
+          <textarea name="write-us-text-field" id="write-us-text-field" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button modal-button-submit" type="submit">Отправить</button>
       </form>
-      <button class="button modal-close" type="button">Закрыть</button>
+      <button class="button modal-button-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
