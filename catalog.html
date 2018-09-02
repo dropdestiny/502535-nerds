@@ -89,8 +89,8 @@
               </ul>
             </fieldset>
             <button type="submit" class="button filter-button">Показать</button>
+                    </form>
         </section>
-        </form>
         <div class="catalog-content">
           <div class="flex-filters">
             <h2 class="visually-hidden">Сортировка</h2>
@@ -107,7 +107,7 @@
             <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="catalog-list">
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/sedona.jpg" width="360" min-height="576" alt="Sedona">
+                <img class="catalog-item-image" src="img/sedona.jpg" width="360" alt="Sedona">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">Sedona</a>
@@ -117,7 +117,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/pink.jpg" width="360" min-height="576" alt="Pink App">
+                <img class="catalog-item-image" src="img/pink.jpg" width="360" alt="Pink App">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">Pink App</a>
@@ -127,7 +127,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/barbershop.jpg" width="360" min-height="576" alt="Barbsershop">
+                <img class="catalog-item-image" src="img/barbershop.jpg" width="360" alt="Barbsershop">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">Barbershop</a>
@@ -137,7 +137,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/mishka.jpg" width="360" min-height="576" alt="Mishka">
+                <img class="catalog-item-image" src="img/mishka.jpg" width="360" alt="Mishka">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">Mishka</a>
@@ -147,7 +147,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/aplus.jpg" width="360" min-height="576" alt="A Plus">
+                <img class="catalog-item-image" src="img/aplus.jpg" width="360" alt="A Plus">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">A Plus</a>
@@ -157,7 +157,7 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <img class="catalog-item-image" src="img/kvast.jpg" width="360" min-height="576" alt="Kvast">
+                <img class="catalog-item-image" src="img/kvast.jpg" width="360" alt="Kvast">
                 <div class="catalog-item-info">
                   <h3 class="catalog-item-name">
                 <a href="#">Kvast</a>
@@ -169,7 +169,7 @@
             </ul>
           </section>
           <section class="pagination">
-            <span class="visually-hidden">Навигация по страницам</span>
+            <h2 class="visually-hidden">Навигация по страницам</h2>
             <ul class="pagination-list">
               <li><a class="current" href="#">1<span class="visually-hidden">Перейти к странице 1</span></a></li>
               <li><a href="#">2<span class="visually-hidden">Перейти к странице 2</span></a></li>
@@ -182,11 +182,12 @@
     </main>
     <footer class="main-footer">
       <section class="adress-map">
+        <h2 class="visually-hidden">Наш адрес на карте</h2>
         <img src="img/contacts-map-placeholder.png" alt="Карта с указанием нашего адреса">
         <!--iframe яндекс карт почему-то перестал грузиться, вместо него вставил гугл карту. если перенести стили из внутренних дивов в css то карта перестает грузиться.-->
         <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-        <div style='overflow:hidden;height:416px;width:1440px;'>
-          <div id='gmap_canvas' style='height:416px;width:1440px;'></div>
+        <div style='overflow:hidden;min-height:416px;width:1440px;'>
+          <div id='gmap_canvas' style='min-height:416px;width:1440px;'></div>
           <style>
             #gmap_canvas img {
               max-width: none;
@@ -219,7 +220,7 @@
       </section>
       <div class="container">
         <section class="contacts-map">
-          <h2 class='visually-hidden'>Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts">
             <b>NЁRDS DESIGN STUDIO</b>
             <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел.

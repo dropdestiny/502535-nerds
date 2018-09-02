@@ -4,6 +4,10 @@ html {
   box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,16 +17,12 @@ body {
   font-weight: 400;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 a {
   text-decoration: none;
 }
 
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -40,6 +40,11 @@ a {
   text-transform: uppercase;
   background-color: rgb(251, 86, 90);
   border: none;
+  display: block;
+  padding: 13px 0;
+  width: 160px;
+  height: 50px;
+  border-radius: 3px;
 }
 
 .button:hover, .button:focus {
@@ -49,6 +54,7 @@ a {
 .button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: rgb(215, 55, 59);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button-green {
@@ -83,14 +89,12 @@ a {
   line-height: 30px;
   font-weight: 500;
   background-color: rgb(238, 238, 238);
-  padding-bottom: 9px;
 }
 
 .inner-page .main-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 60px;
 }
 
 .inner-page .main-navigation {
@@ -112,12 +116,18 @@ a {
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
+  padding-bottom: 37px;
+  margin: 0;
 }
 
 .main-navigation a {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.main-header-logo {
+  margin-top: 49px;
 }
 
 .main-header-logo img:hover, .main-header-logo img:focus {
@@ -130,16 +140,31 @@ a {
 
 .site-navigation, .user-navigation {
   list-style: none;
-  margin: 0;
+  margin-top: 75px;
   padding: 0;
 }
 
 .site-navigation {
   width: 440px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .user-navigation {
-  width: 160px;
+  width: 120px;
+  margin-left: 37px;
+}
+
+.user-navigation .navigation-cart {
+  background-image: url(../img/nav-icon-cart.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position-y: 6px;
+  background-position-x: 2px;
+}
+
+.navigation-cart a {
+  padding-left: 43px;
 }
 
 .site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
@@ -159,11 +184,9 @@ a {
 
 .slider {
   background-color: rgb(238, 238, 238);
-  padding-top: 9px;
 }
 
 .slide {
-  padding-top: 67px;
   background-color: inherit;
 }
 
@@ -171,7 +194,6 @@ a {
   background-image: url(../img/slider-slide-first.png);
   background-repeat: no-repeat;
   background-position: center right;
-  padding-bottom: 80px;
 }
 
 .slide-img:nth-child(2) {
@@ -186,6 +208,15 @@ a {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+}
+
+.slider-button {
+  display: block;
+  width: 240px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
 }
 
 .slider-control-button {
@@ -215,8 +246,8 @@ a {
 /*services*/
 
 .services {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .services h3 {
@@ -231,7 +262,15 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  margin-right: 100px;
+}
+
+.service-item:nth-child(3n) {
+  margin: 0px;
 }
 
 .service-item {
@@ -266,7 +305,10 @@ a {
 }
 
 .studio-statistics {
+  min-height: 208px;
   width: 360px;
+  margin-top: 40px;
+  margin-bottom: 5px;
 }
 
 .about-us ul {
@@ -275,30 +317,35 @@ a {
   margin: 0;
 }
 
+.about-us li {
+  margin-left: 33px;
+  margin-bottom: 25px;
+}
+
 .about-us b {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
 }
 
-/* пока не нужен
+.about-us p {
+  margin-top: 33px;
+}
 
 .about-us li {
   list-tyle;:
 }
 
-*/
-
 .about-us h4 {
+  margin-top: 40px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.stats-info caption {
-  font-size: 45px;
-  line-height: 10px;
+.stats-information caption {
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 49px;
 }
 
 .stats-info {
@@ -331,8 +378,15 @@ a {
   justify-content: space-between;
 }
 
-.logo-list ul {
+.logo-list li {
+  display: flex;
+  justify-content: center;
   width: 260px;
+}
+
+.logo-item a {
+  display: block;
+  margin: auto;
 }
 
 .logo-item img {
@@ -452,6 +506,10 @@ a {
 
 .write-us-item input:focus, .write-us-item textarea:focus {
   border-color: rgb(0, 0, 0);
+}
+
+.contacts a {
+  width: 219px;
 }
 
 .modal-button-submit {
@@ -595,6 +653,10 @@ a {
   margin-bottom: 33px;
 }
 
+.catalog-item-image {
+  min-height: 576px;
+}
+
 .catalog-item-info {
   line-height: 18px;
   font-weight: 400;
@@ -660,7 +722,9 @@ a {
 
 /*Временно убрал эти элементы из потока, позже сделаю нормальное скрытие*/
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -669,6 +733,6 @@ a {
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0px, 0px, 0px, 0px);
   overflow: hidden;
 }
