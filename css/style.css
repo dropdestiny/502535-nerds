@@ -167,7 +167,6 @@ a {
 
 .main-header-logo {
   margin-top: 49px;
-  padding-bottom: 9px;
 }
 
 .main-header-logo img:hover, .main-header-logo img:focus {
@@ -180,7 +179,7 @@ a {
 
 .site-navigation, .user-navigation {
   list-style: none;
-  margin-top: 77px;
+  margin-top: 76px;
   padding: 0;
 }
 
@@ -204,11 +203,11 @@ a {
   background-repeat: no-repeat;
   position: absolute;
   background-position-y: 6px;
-  background-position-x: 2px;
+  background-position-x: 3px;
 }
 
 .navigation-cart a {
-  padding-left: 43px;
+  padding-left: 45px;
 }
 
 .site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
@@ -244,7 +243,7 @@ a {
   position: relative;
   background-color: rgb(238, 238, 238);
   padding-top: 9px;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 .slider-item {
@@ -260,21 +259,21 @@ a {
   background-image: url(../img/slider-first.png);
   background-repeat: no-repeat;
   background-position: 93% 0px;
-  padding-bottom: 72px;
+  padding-bottom: 81px;
 }
 
 .slider-item:nth-child(2) {
   background-image: url(../img/slider-second.png);
   background-repeat: no-repeat;
   background-position: center right;
-  padding-bottom: 72px;
+  padding-bottom: 81px;
 }
 
 .slider-item:nth-child(3) {
   background-image: url(../img/slider-third.png);
   background-repeat: no-repeat;
   background-position: center right;
-  padding-bottom: 72px;
+  padding-bottom: 81px;
 }
 
 .slider-header {
@@ -283,6 +282,7 @@ a {
   font-weight: 500;
   color: rgb(0, 0, 0);
   margin: 0;
+  margin-top: 9px;
   margin-bottom: 26px;
   max-width: 600px;
 }
