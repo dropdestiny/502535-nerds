@@ -198,7 +198,7 @@ a {
   -ms-flex-pack: justify;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 440px;
 }
@@ -540,6 +540,8 @@ a {
   display: block;
   padding-top: 4px;
   margin-bottom: 40px;
+  max-width: 370px;
+  max-height: 215px;
 }
 
 .stats-information caption {
@@ -599,7 +601,7 @@ a {
 .projects-logo-list::before {
   content: "";
   position: absolute;
-  top: 160px;
+  bottom: 40px;
   left: 0;
   width: 1160px;
   height: 2px;
@@ -639,6 +641,7 @@ a {
 }
 
 .logo-item img {
+  max-width: 100%;
   opacity: 0.2;
 }
 
@@ -727,7 +730,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1033,6 +1036,11 @@ a {
   padding-top: 40px;
 }
 
+.catalog-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .catalog-item::before {
   content: "";
   position: absolute;
@@ -1071,16 +1079,19 @@ a {
   -ms-flex-align: center;
   align-items: center;
   position: absolute;
-  margin-top: -238px;
+  bottom: 0;
   z-index: 0;
   width: 360px;
   min-height: 231px;
-  max-height: 576px;
   background-color: rgb(238, 238, 238);
   -webkit-box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
   box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
-  overflow-y: auto;
   visibility: hidden;
+}
+
+.catalog-item-hidden-info {
+  overflow-y: auto;
+  max-height: 543px;
 }
 
 .catalog-item-name {
@@ -1102,7 +1113,8 @@ a {
 
 .catalog-item-description {
   display: inline-block;
-  max-height: 576px;
+  vertical-align: middle;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -1606,10 +1618,14 @@ a {
 
 .modal-write-us {
   width: 960px;
-  right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 80px;
   padding: 27px 100px;
+}
+
+.writeus-modal .modal {
+  display: block;
 }
 
 .write-us-form {
@@ -1761,4 +1777,3 @@ a {
 .modal-button-close:active::before, .modal-button-close:active::after {
   background-color: rgba(251, 86, 90, 0.1);
 }
-
