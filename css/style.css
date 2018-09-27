@@ -197,7 +197,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   justify-content: space-between;
   width: 440px;
 }
@@ -216,7 +217,7 @@ a {
 }
 
 .navigation-cart a {
-  padding-left: 45px;
+  padding-left: 46px;
 }
 
 .site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
@@ -344,6 +345,7 @@ a {
 .slider-controls .slider-control {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 18px;
   height: 18px;
   padding: 9px;
@@ -389,7 +391,7 @@ a {
 .services::after {
   content: "";
   position: absolute;
-  top: 428px;
+  margin-top: 82px;
   left: 0;
   width: 1160px;
   height: 2px;
@@ -679,7 +681,7 @@ a {
   text-transform: uppercase;
   display: block;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .address-contacts-address {
@@ -687,7 +689,7 @@ a {
   line-height: 18px;
   font-weight: 400;
   color: rgb(102, 102, 102);
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 /*footer-map*/
@@ -724,6 +726,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -961,8 +965,6 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 4px;
-  padding-left: 6px;
 }
 
 .catalog-filters {
@@ -1034,7 +1036,7 @@ a {
 .catalog-item::before {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 0;
   width: 360px;
   height: 40px;
   background-image: url(../img/catalog-item-header.svg);
@@ -1114,7 +1116,8 @@ a {
 
 .button-item-price {
   width: 200px;
-  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-bottom: 32px;
 }
 
@@ -1412,6 +1415,8 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 4px;
+  padding-left: 5px;
   width: 366px;
 }
 
@@ -1448,8 +1453,8 @@ a {
 .sorting-down::before {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 30px;
+  margin-top: 4px;
+  margin-left: 23px;
   width: 11px;
   height: 10px;
   background-image: url(../img/filter-icon-sort-down.svg);
@@ -1461,8 +1466,8 @@ a {
 .sorting-up::before {
   content: "";
   position: absolute;
-  right: -47px;
-  top: 6px;
+  margin-top: 4px;
+  margin-left: 51px;
   width: 11px;
   height: 10px;
   background-image: url(../img/filter-icon-sort-up.svg);
@@ -1488,6 +1493,7 @@ a {
   border: none;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
+  margin-right: 13px;
 }
 
 .sorting-button:hover, .sorting-button:focus {
@@ -1548,6 +1554,8 @@ a {
   color: rgb(0, 0, 0);
   background-color: rgb(238, 238, 238);
   border-radius: 3px;
+  margin: 0;
+  margin-top: 4px;
 }
 
 .pagination-list a:hover, .pagination-list a:focus {
@@ -1598,8 +1606,9 @@ a {
 
 .modal-write-us {
   width: 960px;
-  margin-top: -3005px;
-  margin-left: 0px;
+  right: 0;
+  left: 0;
+  bottom: 80px;
   padding: 27px 100px;
 }
 
@@ -1752,3 +1761,4 @@ a {
 .modal-button-close:active::before, .modal-button-close:active::after {
   background-color: rgba(251, 86, 90, 0.1);
 }
+
